@@ -7,9 +7,9 @@
 點選職業，按下產生幹話 就會產生該職業的幹話
 
 ## 環境建置
-Node.js v10.15.0
-Express v4.17.1
-Express-handlebars v5.2.0
+* Node.js v10.15.0
+* Express v4.17.1
+* Express-handlebars v5.2.0
 
 ## 專案安裝流程
 

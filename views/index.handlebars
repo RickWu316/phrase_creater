@@ -1,0 +1,67 @@
+{{!-- //圖片點選區 --}}
+<h1 class="d-flex justify-content-center">你想對誰說幹話</h1>
+<div class="d-flex flex-row justify-content-around align-items-center">
+
+
+    <div class=" card" style="width: 18rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top" alt="engineer">
+        <div class="card-body">
+            <form method="POST" action="/">
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="option1" value="engineer"
+                        {{#ifEquals jobs 'engineer' }}checked {{/ifEquals}}>
+                    <label class="form-check-label" for="inlineRadio1">工程師</label>
+                </div>
+
+        </div>
+    </div>
+    <div class="card" style="width: 15rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top" alt="designer">
+        <div class="card-body">
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="doption2" value="designer"
+                    {{#ifEquals jobs 'designer' }}checked {{/ifEquals}}>
+                <label class="form-check-label" for="inlineRadio2">設計師</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="card" style="width: 16rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top" alt="entrepreneur">
+        <div class="card-body">
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="option3" value="entrepreneur"
+                    {{#ifEquals jobs 'entrepreneur' }}checked {{/ifEquals}}>
+                <label class="form-check-label" for="inlineRadio3">創業家</label>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{{!--
+//幹話產生區 --}}
+
+<div class="row">
+    <div class="col-1">
+        <button type="submit" class="btn btn-outline-secondary">產生幹話</button>
+    </div>
+    <div class="form-group col-11">
+        {{!-- <label for="exampleFormControlTextarea1">Example textarea</label> --}}
+        <textarea type="text" class="form-control" name="content-area" rows="3">{{#if phrase}}{{phrase}}
+        {{/if}}</textarea>
+
+
+    </div>
+
+    </form>
+
+</div>
